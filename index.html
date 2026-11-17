@@ -26,6 +26,7 @@
 <meta name="twitter:description" content="Short guitar drills for chord changes, strumming, fingerstyle, rhythm and timing, new chords and speed, with a guide guitar playing along at your tempo. For iPhone, iPad and Mac.">
 <meta name="twitter:image" content="https://chordmentor.nickcoleman.io/images/og-card.jpg">
 <link rel="stylesheet" href="/style.css">
+<script src="/js/device.js"></script>
 <!-- head:end -->
 </head>
 <body>
@@ -34,6 +35,11 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/" aria-current="page"><img src="/images/icon.png" alt="" width="30" height="30"><span>ChordMentor</span></a>
+    <div class="device-switch" role="group" aria-label="Show screens for">
+      <button type="button" data-device-pick="iphone" aria-pressed="true" title="iPhone"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><span>iPhone</span></button>
+      <button type="button" data-device-pick="ipad" aria-pressed="false" title="iPad"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M11 18h2"/></svg><span>iPad</span></button>
+      <button type="button" data-device-pick="mac" aria-pressed="false" title="Mac"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="4.5" width="15" height="10.5" rx="1.5"/><path d="M2 19h20"/></svg><span>Mac</span></button>
+    </div>
     <nav class="site-nav" aria-label="Main">
       <a href="/guides/">Guides</a>
       <a class="nav-support" href="/support.html">Support</a>
@@ -100,7 +106,11 @@
             <p class="muted">The guide guitar strums along with you, or plays just the rhythm on muted strings so you hear your own chords over it.</p>
             <a class="more" href="/guides/strumming/">How Strumming works →</a>
           </div>
-          <div class="mac-frame"><img src="/images/app/mac-strumming.jpg" width="1600" height="1131" loading="lazy" alt="Strumming on Mac: the chord diagrams, beat lights and strum pattern, with the routine, tempo and pattern options in a side panel"></div>
+          <div class="device-shot">
+            <div class="phone d-iphone"><img src="/images/app/iphone/strumming.jpg" width="600" height="1304" loading="lazy" alt="Strumming on iPhone: chord diagrams, beat lights and the strum pattern, with routine, tempo and pattern options"></div>
+            <div class="tablet d-ipad"><img src="/images/app/ipad/strumming.jpg" width="1600" height="1200" loading="lazy" alt="Strumming on iPad: chord diagrams, beat lights and the strum pattern, with routine, tempo and pattern options"></div>
+            <div class="mac-frame d-mac"><img src="/images/app/mac/strumming.jpg" width="1600" height="1131" loading="lazy" alt="Strumming on Mac: chord diagrams, beat lights and the strum pattern, with routine, tempo and pattern options"></div>
+          </div>
         </article>
         <article class="skill flip">
           <div class="skill-text">
@@ -110,7 +120,11 @@
             <p class="muted">String lanes light each note as it’s played and show where the thumb goes next. You can also write your own patterns on a grid you tap.</p>
             <a class="more" href="/guides/fingerstyle/">How Fingerstyle works →</a>
           </div>
-          <div class="mac-frame"><img src="/images/app/mac-fingerstyle.jpg" width="1600" height="1131" loading="lazy" alt="Fingerstyle on Mac: C and G chord diagrams over string lanes for Travis with a Pinch, with the picking styles in a side panel"></div>
+          <div class="device-shot">
+            <div class="phone d-iphone"><img src="/images/app/iphone/fingerstyle.jpg" width="600" height="1304" loading="lazy" alt="Fingerstyle on iPhone: C and G chord diagrams over string lanes for Travis with a Pinch, with the picking styles"></div>
+            <div class="tablet d-ipad"><img src="/images/app/ipad/fingerstyle.jpg" width="1600" height="1200" loading="lazy" alt="Fingerstyle on iPad: C and G chord diagrams over string lanes for Travis with a Pinch, with the picking styles"></div>
+            <div class="mac-frame d-mac"><img src="/images/app/mac/fingerstyle.jpg" width="1600" height="1131" loading="lazy" alt="Fingerstyle on Mac: C and G chord diagrams over string lanes for Travis with a Pinch, with the picking styles"></div>
+          </div>
         </article>
       </div>
 
@@ -148,19 +162,31 @@
       </div>
       <ol class="triptych">
         <li>
-          <div class="shot"><img src="/images/app/fret-hand.jpg" width="677" height="874" loading="lazy" alt="Fret Hand, bar 2 of 12: C now, G next"></div>
+          <div class="device-shot">
+            <div class="shot d-iphone"><img src="/images/app/iphone/fret-hand.jpg" width="677" height="874" loading="lazy" alt="Fret Hand: C now, G next"></div>
+            <div class="shot d-ipad"><img src="/images/app/ipad/fret-hand.jpg" width="900" height="591" loading="lazy" alt="Fret Hand: C now, G next"></div>
+            <div class="shot d-mac"><img src="/images/app/mac/fret-hand.jpg" width="829" height="820" loading="lazy" alt="Fret Hand: C now, G next"></div>
+          </div>
           <span class="step-num">01</span>
           <h3>Fret Hand</h3>
           <p>One strum per bar, so all your attention goes on the change.</p>
         </li>
         <li>
-          <div class="shot"><img src="/images/app/strum-hand.jpg" width="677" height="995" loading="lazy" alt="Strum Hand: the chord diagrams faded, with a note to deaden the strings and play the pattern"></div>
+          <div class="device-shot">
+            <div class="shot d-iphone"><img src="/images/app/iphone/strum-hand.jpg" width="677" height="995" loading="lazy" alt="Strum Hand: the chord diagrams faded, with a note to deaden the strings and play the pattern"></div>
+            <div class="shot d-ipad"><img src="/images/app/ipad/strum-hand.jpg" width="900" height="628" loading="lazy" alt="Strum Hand: the chord diagrams faded, with a note to deaden the strings and play the pattern"></div>
+            <div class="shot d-mac"><img src="/images/app/mac/strum-hand.jpg" width="829" height="871" loading="lazy" alt="Strum Hand: the chord diagrams faded, with a note to deaden the strings and play the pattern"></div>
+          </div>
           <span class="step-num">02</span>
           <h3>Strum Hand</h3>
           <p>The pattern on muted strings, with no chords, to lock in the rhythm. In Fingerstyle, Picking Hand plays it on open strings.</p>
         </li>
         <li>
-          <div class="shot"><img src="/images/app/both-hands.jpg" width="677" height="1088" loading="lazy" alt="Both Hands: D now, Em next, with a fretboard showing which two fingers travel"></div>
+          <div class="device-shot">
+            <div class="shot d-iphone"><img src="/images/app/iphone/both-hands.jpg" width="677" height="1088" loading="lazy" alt="Both Hands: D now, Em next, with a fretboard showing which two fingers travel"></div>
+            <div class="shot d-ipad"><img src="/images/app/ipad/both-hands.jpg" width="900" height="471" loading="lazy" alt="Both Hands: D now, Em next, with a fretboard showing which two fingers travel"></div>
+            <div class="shot d-mac"><img src="/images/app/mac/both-hands.jpg" width="829" height="992" loading="lazy" alt="Both Hands: D now, Em next, with a fretboard showing which two fingers travel"></div>
+          </div>
           <span class="step-num">03</span>
           <h3>Both Hands</h3>
           <p>Chords and pattern together, the way you’d play the song. The tempo can rise as you play, up to a top speed you choose.</p>
@@ -176,7 +202,11 @@
         <h2>See which changes need work</h2>
         <p class="lede">The Change Map shows the best tempo you’ve rated clean and your Sprint best for every pair of chords you practice. Tap any square to drill that change.</p>
       </div>
-      <div class="tablet"><img src="/images/app/ipad-progress.jpg" width="1600" height="1167" loading="lazy" alt="Progress on iPad: This week, three Practice next suggestions, and the Change Map, a grid of chord pairs with each square shaded by the best clean tempo, beside the list of chords you’re working on"></div>
+      <div class="device-shot">
+        <div class="phone d-iphone"><img src="/images/app/iphone/progress.jpg" width="600" height="1304" loading="lazy" alt="Progress on iPhone: This week, three Practice next suggestions and the Change Map, a grid of chord pairs with each square shaded by the best clean tempo"></div>
+        <div class="tablet d-ipad"><img src="/images/app/ipad/progress.jpg" width="1600" height="1200" loading="lazy" alt="Progress on iPad: This week, three Practice next suggestions and the Change Map, a grid of chord pairs with each square shaded by the best clean tempo"></div>
+        <div class="mac-frame d-mac"><img src="/images/app/mac/progress.jpg" width="1600" height="1131" loading="lazy" alt="Progress on Mac: This week, three Practice next suggestions and the Change Map, a grid of chord pairs with each square shaded by the best clean tempo"></div>
+      </div>
     </div>
   </section>
 

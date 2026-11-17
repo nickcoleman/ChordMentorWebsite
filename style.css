@@ -406,3 +406,33 @@ figcaption { font-size: .92rem; color: var(--ink-2); margin-top: 12px; }
 
 /* Ready for step clips and overview videos (see README, "Adding a clip"). */
 .mac-frame video, .shot video, .tablet video { width: 100%; display: block; }
+
+/* Device switch: the header's iPhone / iPad / Mac control and the screens it swaps */
+.device-switch {
+  display: inline-flex; padding: 3px; gap: 2px; border-radius: 11px;
+  background: var(--line);
+}
+.device-switch button {
+  display: inline-flex; align-items: center; gap: 6px;
+  font: 500 .85rem/1 var(--sans); color: var(--ink-2);
+  background: transparent; border: 0; border-radius: 8px; padding: 6px 10px; cursor: pointer;
+}
+.device-switch svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; }
+.device-switch button:hover { color: var(--ink); }
+.device-switch button[aria-pressed="true"] { background: var(--surface); color: var(--teal-ink); box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+@media (max-width: 760px) {
+  .device-switch span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .device-switch button { padding: 6px 8px; }
+}
+@media (max-width: 560px) { .brand span { display: none; } }
+
+.device-shot > * { display: none; }
+html:not([data-device]) .device-shot > .d-iphone,
+html[data-device="iphone"] .device-shot > .d-iphone,
+html[data-device="ipad"] .device-shot > .d-ipad,
+html[data-device="mac"] .device-shot > .d-mac { display: block; }
+.device-shot > .phone { max-width: 290px; margin-inline: auto; }
+.device-shot > .tablet img, .device-shot > .mac-frame img { width: 100%; }
+.spread .device-shot { margin-top: clamp(32px, 4vw, 48px); }
+.spread .device-shot > .tablet { margin-top: 0; }
+.spread .device-shot > .mac-frame { max-width: 1100px; }

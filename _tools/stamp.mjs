@@ -55,6 +55,7 @@ for (const file of pages) {
 <meta name="twitter:description" content="${desc}">
 <meta name="twitter:image" content="${SITE}${OG_IMAGE}">
 <link rel="stylesheet" href="/style.css">
+<script src="/js/device.js"></script>
 `;
 
   const cur = (match) => (match ? ' aria-current="page"' : '');
@@ -63,6 +64,11 @@ for (const file of pages) {
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/"${path === '/' ? ' aria-current="page"' : ''}><img src="/images/icon.png" alt="" width="30" height="30"><span>ChordMentor</span></a>
+    <div class="device-switch" role="group" aria-label="Show screens for">
+      <button type="button" data-device-pick="iphone" aria-pressed="true" title="iPhone"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><span>iPhone</span></button>
+      <button type="button" data-device-pick="ipad" aria-pressed="false" title="iPad"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M11 18h2"/></svg><span>iPad</span></button>
+      <button type="button" data-device-pick="mac" aria-pressed="false" title="Mac"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="4.5" width="15" height="10.5" rx="1.5"/><path d="M2 19h20"/></svg><span>Mac</span></button>
+    </div>
     <nav class="site-nav" aria-label="Main">
       <a href="/guides/"${cur(path.startsWith('/guides/'))}>Guides</a>
       <a class="nav-support" href="/support.html"${cur(path === '/support.html')}>Support</a>

@@ -26,6 +26,7 @@
 <meta name="twitter:description" content="How to practice strumming in ChordMentor: read the beat lights and pattern row, choose from 13 strum patterns in 4/4, 3/4 and 6/8, let the tempo climb, and write your own.">
 <meta name="twitter:image" content="https://chordmentor.nickcoleman.io/images/og-card.jpg">
 <link rel="stylesheet" href="/style.css">
+<script src="/js/device.js"></script>
 <!-- head:end -->
 </head>
 <body>
@@ -34,6 +35,11 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/"><img src="/images/icon.png" alt="" width="30" height="30"><span>ChordMentor</span></a>
+    <div class="device-switch" role="group" aria-label="Show screens for">
+      <button type="button" data-device-pick="iphone" aria-pressed="true" title="iPhone"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg><span>iPhone</span></button>
+      <button type="button" data-device-pick="ipad" aria-pressed="false" title="iPad"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M11 18h2"/></svg><span>iPad</span></button>
+      <button type="button" data-device-pick="mac" aria-pressed="false" title="Mac"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4.5" y="4.5" width="15" height="10.5" rx="1.5"/><path d="M2 19h20"/></svg><span>Mac</span></button>
+    </div>
     <nav class="site-nav" aria-label="Main">
       <a href="/guides/" aria-current="page">Guides</a>
       <a class="nav-support" href="/support.html">Support</a>
@@ -52,7 +58,11 @@
       <p class="lede">Follow the beat lights, change chords on the beat, and work up from quarter-note downs to syncopated patterns.</p>
       <p class="who">For you if you can hold a few open chords and want your strumming to keep time. New to the app? Start with <a href="/guides/getting-started/">your first ten minutes</a>.</p>
       <figure class="guide-cover">
-        <div class="mac-frame"><img src="/images/app/mac-strumming.jpg" width="1600" height="1131" alt="Strumming on Mac: chord diagrams, beat lights and the strum pattern, with routine, tempo and pattern options beside them"></div>
+        <div class="device-shot">
+          <div class="phone d-iphone"><img src="/images/app/iphone/strumming.jpg" width="600" height="1304" loading="lazy" alt="Strumming on iPhone: chord diagrams, beat lights and the strum pattern, with routine, tempo and pattern options"></div>
+          <div class="tablet d-ipad"><img src="/images/app/ipad/strumming.jpg" width="1600" height="1200" loading="lazy" alt="Strumming on iPad: chord diagrams, beat lights and the strum pattern, with routine, tempo and pattern options"></div>
+          <div class="mac-frame d-mac"><img src="/images/app/mac/strumming.jpg" width="1600" height="1131" loading="lazy" alt="Strumming on Mac: chord diagrams, beat lights and the strum pattern, with routine, tempo and pattern options"></div>
+        </div>
       </figure>
     </div>
   </section>
