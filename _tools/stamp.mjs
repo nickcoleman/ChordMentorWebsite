@@ -12,6 +12,8 @@ import { join, relative } from 'node:path';
 
 const SITE = 'https://chordmentor.nickcoleman.io';
 const APP = 'https://apps.apple.com/app/id6827199615';
+// App Store links carry an App Analytics campaign (pt = provider ID, ct = where on the site).
+const campaign = ct => `https://apps.apple.com/app/apple-store/id6827199615?pt=119028554&amp;mt=8&amp;ct=${ct}`;
 const OG_IMAGE = '/images/og-card.jpg';
 
 const pages = [];
@@ -72,7 +74,7 @@ for (const file of pages) {
     <nav class="site-nav" aria-label="Main">
       <a href="/guides/"${cur(path.startsWith('/guides/'))}>Guides</a>
       <a class="nav-support" href="/support.html"${cur(path === '/support.html')}>Support</a>
-      <a class="button small" href="${APP}">Get the app</a>
+      <a class="button small" href="${campaign('web-header')}">Get the app</a>
     </nav>
   </div>
 </header>
@@ -85,7 +87,7 @@ for (const file of pages) {
       <a href="/guides/">Guides</a>
       <a href="/support.html">Support</a>
       <a href="/privacy.html">Privacy</a>
-      <a href="${APP}">App Store</a>
+      <a href="${campaign('web-footer')}">App Store</a>
     </nav>
     <p>© 2026 Nick Coleman</p>
   </div>
