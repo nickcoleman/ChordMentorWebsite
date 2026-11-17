@@ -21,12 +21,14 @@ const jobs = [
   ['s2-strum-hand', 'strum-hand', 'stage'],
   ['5-drill-both-hands', 'both-hands', 'stage'],
   // iPad and Mac versions of the images the iPhone crops in images/app/ show.
-  ['0-welcome', 'welcome', 'full', ['ipad', 'mac'], 1200],
+  ['0-welcome', 'welcome', { ipad: 'full', mac: [0.222, 0.152, 0.556, 0.695] }, ['ipad', 'mac'], 1200],
   ['1-map', 'practice-next', { ipad: [0.005, 0.09, 0.58, 0.36], mac: [0.18, 0.075, 0.555, 0.56] }, ['ipad', 'mac'], 1200],
-  ['2-drill', 'drill-setup', 'full', ['ipad', 'mac'], 1200],
-  ['8d-sprint-listening', 'sprint', 'full', ['ipad', 'mac'], 1200],
-  ['7-shuffle-simple', 'shuffle', 'full', ['ipad', 'mac'], 1200],
-  ['9-shapes', 'shapes', 'full', ['ipad', 'mac'], 1200],
+  ['2-drill', 'drill-setup', { ipad: 'full', mac: [0.192, 0.0, 0.524, 0.8] }, ['ipad', 'mac'], 1200],
+  ['8d-sprint-listening', 'sprint', { ipad: 'full', mac: [0.192, 0.12, 0.524, 0.76] }, ['ipad', 'mac'], 1200],
+  ['7-shuffle-simple', 'shuffle', { ipad: 'full', mac: [0.192, 0.068, 0.524, 0.56] }, ['ipad', 'mac'], 1200],
+  // Progress beside text: the main column only, so it reads at half width.
+  ['1-map', 'progress-main', { ipad: [0.005, 0.08, 0.76, 0.91], mac: [0.18, 0.0, 0.555, 0.999] }, ['ipad', 'mac'], 1200],
+  ['9-shapes', 'shapes', { ipad: 'full', mac: [0.192, 0.1, 0.524, 0.76] }, ['ipad', 'mac'], 1200],
 ];
 const dims = f => {
   const t = execFileSync('sips', ['-g', 'pixelWidth', '-g', 'pixelHeight', f]).toString();

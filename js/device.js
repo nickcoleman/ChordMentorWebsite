@@ -28,7 +28,7 @@
       var others = DEVICES.filter(function (d) { return d !== device; }).map(function (d) {
         return '<button type="button" data-device-pick="' + d + '">' + NAMES[d] + '</button>';
       });
-      notes[n].innerHTML = 'Showing ' + NAMES[device] + ' screens. Also see them on ' + others.join(' or ') + '.';
+      notes[n].innerHTML = 'Showing ' + NAMES[device] + ' screens. Switch to ' + others.join(' or ') + '.';
     }
     if (remember) { try { localStorage.setItem(KEY, device); } catch (e) {} }
   }

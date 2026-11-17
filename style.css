@@ -453,3 +453,45 @@ html[data-device="mac"] .guide-card .thumb > .d-mac { display: block; }
   font: inherit; color: var(--teal-ink); background: none; border: 0; padding: 0; cursor: pointer;
   text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px;
 }
+
+/* Official App Store badge */
+.store-badge { display: inline-block; line-height: 0; border-radius: 9px; }
+.store-badge img { height: 54px; width: auto; }
+.mid-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px 20px; margin-top: clamp(40px, 5vw, 64px); }
+.mid-cta .store-badge img { height: 48px; }
+.mid-cta p { margin: 0; color: var(--ink-2); }
+.closing .store-badge { margin-top: 8px; }
+
+/* Device switch: 44-point touch targets */
+.device-switch button { min-width: 44px; min-height: 44px; justify-content: center; }
+.device-switch { padding: 2px; gap: 0; }
+@media (max-width: 760px) { .device-switch button { padding: 0; } }
+@media (max-width: 400px) {
+  .site-header .wrap { gap: 10px; }
+  .site-nav { gap: 10px; }
+}
+.device-note button { padding: 12px 2px; margin: -12px -2px; }
+
+/* Progress (merged with "It starts where you are") */
+.progress .device-shot > .tablet, .progress .device-shot > .mac-frame { max-width: 560px; margin-inline: auto; }
+
+/* Phone: keep the home page short. Skill cards two across; drill steps image beside text. */
+@media (max-width: 520px) {
+  .skills-minor { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 14px; }
+  .mini .shot { aspect-ratio: 4 / 5; max-width: none; }
+  .mini h3 { font-size: 1.05rem; margin-top: 12px; }
+  .mini p { font-size: .88rem; }
+  .device-shot > .phone { max-width: 240px; }
+}
+@media (max-width: 640px) {
+  .triptych { grid-template-columns: 1fr; gap: 28px; max-width: none; }
+  .triptych .step-num { margin-top: 0; }
+  .triptych li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); column-gap: 16px; align-items: start; }
+  .triptych li > .device-shot { grid-row: 1 / span 3; }
+  .triptych li > :not(.device-shot) { grid-column: 2; }
+}
+.site-nav .button { white-space: nowrap; }
+@media (max-width: 400px) {
+  .site-nav .button { padding: 8px 10px; font-size: .82rem; }
+  .device-switch button { min-width: 40px; }
+}
