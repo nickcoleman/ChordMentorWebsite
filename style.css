@@ -436,3 +436,20 @@ html[data-device="mac"] .device-shot > .d-mac { display: block; }
 .spread .device-shot { margin-top: clamp(32px, 4vw, 48px); }
 .spread .device-shot > .tablet { margin-top: 0; }
 .spread .device-shot > .mac-frame { max-width: 1100px; }
+/* iPad and Mac screens are landscape: stack the welcome pair, keep minis and thumbs uncropped */
+html[data-device="ipad"] .pair, html[data-device="mac"] .pair { grid-template-columns: 1fr; gap: 24px; }
+.pair .device-shot:nth-child(2) > .shot { margin-top: 48px; }
+.pair .device-shot > .shot { margin-top: 0; }
+.mini .device-shot > .tablet, .mini .device-shot > .mac-frame { aspect-ratio: auto; }
+.guide-card .thumb.device-shot > img { display: none; }
+html:not([data-device]) .guide-card .thumb > .d-iphone,
+html[data-device="iphone"] .guide-card .thumb > .d-iphone,
+html[data-device="ipad"] .guide-card .thumb > .d-ipad,
+html[data-device="mac"] .guide-card .thumb > .d-mac { display: block; }
+
+/* "Showing iPhone. Also see it on iPad · Mac" */
+.device-note { font-size: .95rem; color: var(--ink-2); margin-top: 14px; }
+.device-note button {
+  font: inherit; color: var(--teal-ink); background: none; border: 0; padding: 0; cursor: pointer;
+  text-decoration: underline; text-underline-offset: .18em; text-decoration-thickness: 1px;
+}

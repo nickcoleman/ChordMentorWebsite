@@ -3,6 +3,7 @@
 // Picks the visitor's own device the first time; a choice made with the switch is remembered.
 (function () {
   var KEY = 'cm-device', DEVICES = ['iphone', 'ipad', 'mac'];
+  var NAMES = { iphone: 'iPhone', ipad: 'iPad', mac: 'Mac' };
   var root = document.documentElement;
 
   function guess() {
@@ -21,6 +22,13 @@
     var buttons = document.querySelectorAll('[data-device-pick]');
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].setAttribute('aria-pressed', String(buttons[i].getAttribute('data-device-pick') === device));
+    }
+    var notes = document.querySelectorAll('[data-device-note]');
+    for (var n = 0; n < notes.length; n++) {
+      var others = DEVICES.filter(function (d) { return d !== device; }).map(function (d) {
+        return '<button type="button" data-device-pick="' + d + '">' + NAMES[d] + '</button>';
+      });
+      notes[n].innerHTML = 'Showing ' + NAMES[device] + ' screens. Also see them on ' + others.join(' or ') + '.';
     }
     if (remember) { try { localStorage.setItem(KEY, device); } catch (e) {} }
   }
